@@ -12,14 +12,14 @@ import org.springframework.context.annotation.Primary;
 public class DataSourceConfig {
 	@Primary
 	@Bean
-	@ConfigurationProperties(prefix="spring.datasource")
-	public DataSource springDataSource() {
+	@ConfigurationProperties(prefix = "spring.datasource")
+	DataSource springDataSource() {
 		return DataSourceBuilder.create().build();
 	}
-	
+
 	@Bean
-	@ConfigurationProperties(prefix="app.datasource")
-	public DataSource appDataSource() {
+	@ConfigurationProperties(prefix = "app.datasource")
+	DataSource appDataSource() {
 		return DataSourceBuilder.create().build();
 	}
 }

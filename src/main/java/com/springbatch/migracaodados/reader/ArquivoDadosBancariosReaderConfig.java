@@ -11,7 +11,7 @@ import com.springbatch.migracaodados.domain.DadosBancarios;
 @Configuration
 public class ArquivoDadosBancariosReaderConfig {
 	@Bean
-	public FlatFileItemReader<DadosBancarios> dadosBancariosReader() {
+	FlatFileItemReader<DadosBancarios> dadosBancariosReader() {
 		return new FlatFileItemReaderBuilder<DadosBancarios>()
 				.name("dadosBancariosReader")
 				.resource(new FileSystemResource("files/dados_bancarios.csv"))

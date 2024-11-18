@@ -1,8 +1,8 @@
 package com.springbatch.migracaodados.domain;
 
-import java.util.Date;
-
 import org.apache.logging.log4j.util.Strings;
+
+import java.util.Date;
 
 public class Pessoa {
 	private int id;

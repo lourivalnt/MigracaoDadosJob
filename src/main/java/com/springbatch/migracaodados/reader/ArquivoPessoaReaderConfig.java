@@ -16,7 +16,7 @@ import com.springbatch.migracaodados.domain.Pessoa;
 @Configuration
 public class ArquivoPessoaReaderConfig {
 	@Bean
-	public FlatFileItemReader<Pessoa> arquivoPessoaReader() {
+	FlatFileItemReader<Pessoa> arquivoPessoaReader() {
 		return new FlatFileItemReaderBuilder<Pessoa>()
 				.name("arquivoPessoaReader")
 				.resource(new FileSystemResource("files/pessoas.csv"))

@@ -18,7 +18,7 @@ import com.springbatch.migracaodados.domain.Pessoa;
 @Configuration
 public class BancoPessoaWriterConfig {
 	@Bean
-	public JdbcBatchItemWriter<Pessoa> bancoPessoaWriter(
+	JdbcBatchItemWriter<Pessoa> bancoPessoaWriter(
 			@Qualifier("appDataSource") DataSource dataSource) {
 		return new JdbcBatchItemWriterBuilder<Pessoa>()
 				.dataSource(dataSource)
@@ -38,9 +38,8 @@ public class BancoPessoaWriterConfig {
 				ps.setDate(4, new Date(pessoa.getDataNascimento().getTime()));
 				ps.setInt(5, pessoa.getIdade());
 			}
-			
+
 		};
 	}
-	
-	
+
 }

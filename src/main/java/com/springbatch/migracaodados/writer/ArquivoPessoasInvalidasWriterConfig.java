@@ -11,7 +11,7 @@ import com.springbatch.migracaodados.domain.Pessoa;
 @Configuration
 public class ArquivoPessoasInvalidasWriterConfig {
 	@Bean
-	public FlatFileItemWriter<Pessoa> arquivoPessoasInvalidasWriter() {
+	FlatFileItemWriter<Pessoa> arquivoPessoasInvalidasWriter() {
 		return new FlatFileItemWriterBuilder<Pessoa>()
 				.name("arquivoPessoasInvalidasWriter")
 				.resource(new FileSystemResource("files/pessoas_invalidas.csv"))
