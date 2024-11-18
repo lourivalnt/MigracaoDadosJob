@@ -15,7 +15,7 @@ import com.springbatch.migracaodados.domain.Pessoa;
 public class MigrarPessoaStepConfig {
 	@Autowired
 	private StepBuilderFactory stepBuilderFactory;
-	
+
 	@Bean
 	public Step migrarPessoaStep(
 			ItemReader<Pessoa> arquivoPessoaReader,
