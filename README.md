@@ -64,5 +64,5 @@ A aplicação segue a arquitetura modularizada e orientada a tarefas (`job`) do 
 
 ### 1. Clonar o Repositório
 ```bash
-git clone https://github.com/seu-usuario/spring-batch-data-migration.git
-cd spring-batch-data-migration
+git clone https://github.com/lourivalnt/MigracaoDadosJob.git
+cd MigracaoDadosJob
