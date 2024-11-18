@@ -18,7 +18,7 @@ import org.springframework.core.task.SimpleAsyncTaskExecutor;
 public class MigracaoDadosJobConfig {
 	@Autowired
 	private JobBuilderFactory jobBuilderFactory;
-	
+
 	@Bean
 	public Job migracaoDadosJob(
 			@Qualifier("migrarPessoaStep")  Step migrarPessoaStep,
@@ -35,13 +35,13 @@ public class MigracaoDadosJobConfig {
 		Flow migrarDadosBancariosFlow = new FlowBuilder<Flow>("migrarDadosBancariosFlow")
 				.start(migrarDadosBancariosStep)
 				.build();
-		
+
 		Flow stepsParalelos = new FlowBuilder<Flow>("stepsParalelosFlow")
 				.start(migrarPessoaStep)
 				.split(new SimpleAsyncTaskExecutor())
 				.add(migrarDadosBancariosFlow)
 				.build();
-		
+
 		return stepsParalelos;
 	}
 }
