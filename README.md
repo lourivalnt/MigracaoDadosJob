@@ -16,7 +16,8 @@
 ---
 
 ## 📌 Sobre o Projeto
-Este projeto é uma aplicação **Java 21** que utiliza **Spring Batch** para realizar migração de dados entre diferentes sistemas. Ele foi desenvolvido para processar grandes volumes de dados de forma eficiente e escalável, garantindo integridade e consistência durante o processo de transferência.
+Este projeto é uma aplicação **Java 21** que utiliza **Spring Batch** para realizar migração de dados entre diferentes sistemas. Ele foi desenvolvido para leitura de arquivo, escrita em banco de dados, escrita em arquivo, 
+escrita em registros inválidos
 
 ### 🚀 O que foi implementado
 Foi construído um **Job de migração de dados** utilizando **Spring Batch**, que abrange as seguintes funcionalidades:
